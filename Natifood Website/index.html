@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>NatiFood!</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="keywords" content="fruit vegetables farmer biological organic">
+		<meta name="description" content="This website is a portal for buy local food. You just have to choose your area, and start to organize your shopping arroud local farms.">
+		<meta name="author" content="Nans Plancher (B00065724)">
+		
+		<!-- files to include-->
+		<link rel="stylesheet" type="text/css" href="style/main_style.css">
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="js/main_script.js"></script>
+		
+		<!--jquery UI -->
+		 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		 <link id="style" rel="Stylesheet" href="style/UI1/css/smoothness/jquery-ui-1.9.1.custom.css" />
+
+
+
+		  
+		<!--Pugin rate-->
+		<link rel="stylesheet" type="text/css" href="js/alpixel-jRating-5d11ba7/jquery/jRating.jquery.css" media="screen" />
+		<script type="text/javascript" src="js/alpixel-jRating-5d11ba7/jquery/jRating.jquery.js"></script>
+
+		 
+		 <!-- Maps -->
+		 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDzK5rlI0t_zciVAu5Gn9lfuV0M9lThX9s&sensor=false"></script>
+		 <script type="text/javascript" src="js/maps.js"></script>
+
+		 
+	</head> 
+	<body>
+	
+		<div id="logo">
+			<img id="logo_img" src="img/logo.png" alt="NatiFood!" width ="85%"/>
+		</div>
+
+		
+		<div id="menu_top">
+		
+					<div id="menu_food">
+						<ul id="navigation">
+							<li class="dropdown">Meat
+								<ul class="sub_navigation">
+									<li id="beefsteack">Beef Steack</li>
+									<li id="chickenwings">Chicken Wings</li>
+									<li id="porksausage">Pork Sausages</li>
+								</ul>
+							</li>
+							<li class="dropdown">Vegetables
+								<ul class="sub_navigation">
+									<li id="courgette">Courgette</li>
+									<li id="potatoes">Potatoes</li>
+									<li id="garlic">Garlic</li>
+								</ul>
+							</li>
+							<li class="dropdown">Fruits
+								<ul class="sub_navigation">
+									<li id="apple">Apple</li>
+									<li id="blueberry">Blueberry</li>
+									<li id="blackberry">Blackberry</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div id="i_o">
+						<p><a href="#" onClick="import_json()">Import</a> / <a href="#" onClick="openJson()">Export</a></p>
+					</div>
+		</div>
+		
+		<div id="menu_left">
+			<div id="accordion"></div>
+			<div id="switch"></div>
+		</div>
+		
+		<div id="scene">
+			
+			<div id="pres">
+				<h2>What is it?</h2>
+				<div id="photoShow">
+					<div class="current">
+						<img src="img/garlic.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/beefsteack.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/blackberry.jpg" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/blueberry.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/chickenwings.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/courgette.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/porksausage.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+					<div>
+						<img src="img/potatoes.png" alt="Photo Gallery" width="300" class="gallery" />
+					</div>
+				</div>
+				
+				<p>
+					NatiFood! is a non-profit corporation, which list all food producers which want to sell food. The particularity of NatiFood is that all which is listed here has been product in your region. It avoid the 
+					product to have long transport from on far country, and improve the quality of the food. But the most important is that this system enhance the local business, and avoid stubidities like food globalization.
+				<p>
+				<h2>How can i trust you?</h2>
+				<p>
+					You don't have to trust us, you just have to trust your farmer. But, if you are suspicious, be sure that all famers which are listed here have been severely tested and controlled, to be sure that they're production methods 
+					are safe for our life. Obviously, the location of the production is also strictly folows. More over, at least one time by year and without be warmed, a producer controlled to be sure that he respects our convention.
+				<p>
+				<h2>Where is it?</h2>
+					<p>
+						Nowhere, and every where ! You just have to look at the address of the seller, and go to his sell point. If you want to sell some native food and be listed here, you can mail us, or come in our office to meet us.
+					</p>
+				<div id="address">
+					<h5>I want to know the path from my place to the NatiFood! office...</h5>
+				</div>
+				<div style="clear:both;"></div>
+				<div>
+					<div id="googleMap" style="width:100%;height: 500px;"></div>	
+				</div>
+				<h4 id="link_direction_instruction">Show direction instructions</h4>
+				<div id="direction_panel"></div>
+				<div id="links_directions">
+					<h3 id="print_instructions">Print these instructions</h3>
+					<h3 id="close_instruction">Close instructions</h3>
+				</div>
+
+			</div>
+		</div>
+		
+		<div style="clear:both;"></div>
+		
+		<div id="footer">
+
+			<div id="seller_link">
+				<p>You're a seller ? Contact us !</p>
+			</div>
+		</div>	
+	</body>
+</html> 

@@ -1,0 +1,81 @@
+<script>
+	//--resizabl jquery ui
+    $(function() {
+        $( "#resizable" ).resizable({
+            maxHeight: 250,
+            maxWidth: 600,
+            minHeight: 20,
+            minWidth: 400
+        });
+    });
+	//---datepicker jquery ui
+	$(function() {
+        $( "#datepicker" ).datepicker();
+    });
+	//-----tooltip jquery ui
+	$(function() {
+        $('#toolTip').tooltip();
+    });
+	//------Submit button Jquery UI
+	$(function() {
+        $( "input[type=submit]" )
+            .button()
+            .click(function( event ) {
+                event.preventDefault();
+            });
+    });
+	//------dialog box
+	$(function() {
+        $( "#dialog" ).dialog();
+    });
+	//------Submit  bar
+
+	function submit_form() {
+		$('#submitbutton').fadeOut(function(){
+			var sleep = 0;
+			var intId = setInterval(wait,10);
+			
+			function wait(){
+				if (sleep < 100) {
+				$( "#progressbar" ).progressbar({ value: sleep });	
+					sleep++;
+					
+				} 
+				else if(sleep == 100){
+				
+					$('#progressbar').fadeOut(function(){
+						$('#scene').fadeOut(function(){
+							alert("Form sent, come backing to the main page...");
+							window.location.reload()
+						});
+					
+					});
+					
+					clearInterval(intId);
+				}
+
+			}	
+		});
+    };
+
+</script>
+
+<h1>I want to be listed here</h1>
+<p>You want to be listed here ? Just read <span class="word" onclick="openDoc()">the documentation here</span>. You can also mail us using <a class="mail" href="mailto:nans@nplancher.info"> this link.</a></p>
+
+
+<form id="toolTip">
+	First name: <br/>
+	<input type="text" name="firstname" title="Your firstname here"><br/>
+	Last name: <br/>
+	<input type="text" name="lastname" title="Your lastname there"><br/>
+	Email address: <br/>
+	<input type="text" name="email" title="Your exact email address over there"><br/>
+	Date of meeting wished: <br/>
+	<input type="text" id="datepicker" title="Insert the date of meeting" /></p>
+	Reason:<br/>
+	<textarea id="resizable" class="ui-widget-content" rows="4" cols="100" onclick="emptyArea()">Type your reason here...</textarea>
+	<input id='submitbutton' type="submit" value="Submit my proposition" onclick="submit_form()" />
+
+	<div id="progressbarSpace"><div id="progressbar"></div></div>
+</form> 
